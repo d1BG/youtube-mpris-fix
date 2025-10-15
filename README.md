@@ -31,20 +31,6 @@ This ensures your media controls are always in sync, giving you a seamless liste
 
 * 🪶 **Super Lightweight:** No unnecessary bloat. It does one job and does it well.
 
-## Installation (Easy Way) 🛠️
-
-1. Go to the [**Releases**](https://github.com/d1bg/youtube-mpris-fix/releases) page of this repository.
-
-2. Download the latest `.xpi` file (e.g., `youtube_mpris_fix-1.0-fx.xpi`).
-
-3. Open Firefox.
-
-4. Drag the `.xpi` file directly into your Firefox window.
-
-5. When prompted, click "Add" to install the extension.
-
-6. You're all set! 🎉
-
 ## How to load for development 👨‍💻
 
 If you want to load the extension for development or inspect the code:
