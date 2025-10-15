@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube MPRIS Fix",
+  "version": "1.1",
+  "description": "Fixes a bug where YouTube/YT Music doesn't update track metadata (length, position) for MPRIS on autoplay or skip.",
+  "permissions": [
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "*://music.youtube.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
+
