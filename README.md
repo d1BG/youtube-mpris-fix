@@ -1,6 +1,6 @@
 # 🦊 YouTube MPRIS Fixer 🎵
 
-A lightweight but powerful Firefox extension to fix annoying MPRIS metadata bugs on YouTube and YouTube Music! 🎧✨
+A lightweight but powerful browser extension to fix annoying MPRIS metadata bugs on YouTube and YouTube Music! 🎧✨
 (This thing is hella vibecoded if u couldn't tell)
 
 ## The Problem 😩
@@ -38,6 +38,8 @@ Add from Firefox Add-ons: [Youtube MPRIS Fix](https://addons.mozilla.org/en-US/f
 
 If you want to load the extension for development or inspect the code:
 
+### Firefox
+
 1. Clone or download this repository.
 
 2. In Firefox, navigate to `about:debugging`.
@@ -49,3 +51,27 @@ If you want to load the extension for development or inspect the code:
 5. Select the `manifest.json` file inside the `youtube-mpris-fixer` directory.
 
 6. The extension will be active until you close Firefox.
+
+### Chromium (Chrome, Edge, Brave)
+
+1. Clone or download this repository.
+
+2. Open your Chromium-based browser and go to `chrome://extensions` (or `edge://extensions` in Edge).
+
+3. Toggle "Developer mode" on (top-right).
+
+4. Click "Load unpacked".
+
+5. Select the extension directory (the folder that contains `manifest.json`).
+
+6. The extension should appear in the extensions list; reload the extension as you iterate on changes.
+
+> [!WARNING]
+> There will be a warning related to manifest.json background.scripts requiring manifest v2.
+> This is not a functional issue.
+> If you want you can fix this by altering manifest.json to be manifest v3 compliant. *this will break compatibility with firefox*
+>
+> ```diff 
+> - "scripts": ["background.js"]
+> + "service_worker": "background.js"
+> ```
