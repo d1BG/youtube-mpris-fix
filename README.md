@@ -31,7 +31,7 @@ This ensures your media controls are always in sync, giving you a seamless liste
 
 * 🪶 **Super Lightweight:** No unnecessary bloat. It does one job and does it well.
 
-## Insatllation:
+## Installation 🔧:
 Add from Firefox Add-ons: [Youtube MPRIS Fix](https://addons.mozilla.org/en-US/firefox/addon/youtube-mpris-fix)
 
 ## How to load for development 👨‍💻
