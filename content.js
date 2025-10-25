@@ -18,41 +18,23 @@ function findVideoElement() {
 }
 
 function updateMediaSession() {
-    if (!('mediaSession' in navigator) || !videoElement) {
-        return;
-    }
+    if (!('mediaSession' in navigator) || !videoElement) return;
 
-    // Update Position State (Duration, Position, Playback State)
     if (!isNaN(videoElement.duration)) {
-        navigator.mediaSession.playbackState = videoElement.paused ? 'paused' : 'playing';
         navigator.mediaSession.setPositionState({
-            duration: videoElement.duration,
-            playbackRate: videoElement.playbackRate,
-            position: videoElement.currentTime,
+            duration: videoElement.duration
         });
     }
 }
-
 
 /**
  * Attaches all necessary event listeners to the video element.
  */
 function attachVideoListeners() {
     if (!videoElement) return;
-
-    const events = [
-        'play', 'pause', 'seeking', 'seeked', 'timeupdate', 'durationchange', 'loadedmetadata'
-    ];
-
-    // A single listener for all playback-related events.
-    const masterListener = () => {
-        updateMediaSession();
-    };
-
-    events.forEach(event => {
-        videoElement.removeEventListener(event, masterListener); // Clean up first
-        videoElement.addEventListener(event, masterListener);
-    });
+    const masterListener = () => updateMediaSession();
+    videoElement.removeEventListener('durationchange', masterListener);
+    videoElement.addEventListener('durationchange', masterListener);
     console.log("MPRIS Fixer: All video event listeners attached.");
 }
 
@@ -96,5 +78,4 @@ pageObserver.observe(document.body, {
 
 // Initial call to start the process.
 initialize();
-
 
