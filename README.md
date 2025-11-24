@@ -3,7 +3,8 @@
 A lightweight but powerful Firefox extension to fix annoying MPRIS metadata bugs on YouTube and YouTube Music! 🎧✨
 (This thing is hella vibecoded if u couldn't tell)
 
-There is a [Chromium solution](https://github.com/LurkAndLoiter/chromium-youtube-mpris-patch) by @LurkAndLoiter
+There is a more lightweight [solution that works on all browsers](https://github.com/LurkAndLoiter/youtube-mpris-fix) by @LurkAndLoiter
+Once it releases on the Firefox Add-ons page, this repo will be archived
 
 ## The Problem 😩
 
